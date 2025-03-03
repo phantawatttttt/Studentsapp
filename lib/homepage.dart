@@ -208,19 +208,7 @@ class _AddPageState extends State<AddPage> {
                     },
                   ),
                   const SizedBox(height: 16),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      labelText: 'ระดับชั้น',
-                      border: OutlineInputBorder(),
-                    ),
-                    controller: _gradeLevelController,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'กรุณากรอกระดับชั้น';
-                      }
-                      return null;
-                    },
-                  ),
+                  
                   const SizedBox(height: 16),
                   ListTile(
                     title: Text('วันเกิด: ${DateFormat('dd/MM/yyyy').format(_birthDate)}'),
@@ -243,13 +231,13 @@ class _AddPageState extends State<AddPage> {
                         .toList(),
                     onChanged: (value) => setState(() => _category = value!),
                     decoration: const InputDecoration(
-                      labelText: 'หมวดหมู่',
+                      labelText: 'กรุณาเลือกระดับชั้น',
                       border: OutlineInputBorder(),
                     ),
-                    hint: const Text('กรุณาเลือกหมวดหมู่'),
+                    hint: const Text('กรุณาเลือกระดับชั้น'),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'กรุณาเลือกหมวดหมู่';
+                        return 'กรุณาเลือกระดับชั้น';
                       }
                       return null;
                     },
